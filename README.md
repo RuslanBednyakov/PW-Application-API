@@ -1,6 +1,6 @@
-# WebBlog-api
+# PW-Application-api
 
-<div><strong><h4>Note:</h4></strong> This is a server side application for repo <strong>WebBlog-frontend.</strong></div>
+<div><strong><h4>Note:</h4></strong> This is a server side application for repo <strong>PW-Application.</strong></div>
 
 
 # Main stack #
@@ -17,8 +17,8 @@ For database is used postgresql.
 # Installation #
 
 ```
-git clone https://github.com/RuslanBednyakov/WebBlog-React-Redux-api.git
-cd WebBlog-api && npm install
+git clone https://github.com/RuslanBednyakov/PW-Application-API.git
+cd PW-Application && npm install
 ```
 
 # Running the application #
