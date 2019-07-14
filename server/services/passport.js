@@ -17,6 +17,7 @@ jwtOptions.jwtFromRequest = function(req){
   if(req && !!req.headers['authorization']){
     token = req.headers['authorization'];
   }
+  console.log('Passport jwtFromRequest', req.headers)
   return token;
 }
 
