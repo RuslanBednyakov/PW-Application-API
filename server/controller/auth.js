@@ -45,7 +45,7 @@ export function signUp(req, res, next){
       }
     } else {
       response = {
-        message: 'Sorry, but this email already exist',
+        message: 'This email already exists',
         result: 1
       }
     }
@@ -88,4 +88,34 @@ export function signIn(req, res, next){
     .catch(err => { 
       next( new Error(err.message) )
     })
+}
+
+export function checkEmail(req, res, next){
+  const data = req.body;
+  console.log('checkEmail!!!!!!!!!!!!', data)
+  let response;
+
+  db.User
+  .findOne({
+    where: {
+      email: data.email
+    }, 
+  })
+  .then((user) => {
+    if(user) {
+      response = {
+        message: 'This email already exists',
+        result: 1
+      }
+    } else {
+      response = {
+        message: 'Email succussed',
+        result: 2
+      }
+    }
+    res.status(200).send(response);
+  })
+  .catch((err) => {
+    next(new Error(err.message));
+  })
 }

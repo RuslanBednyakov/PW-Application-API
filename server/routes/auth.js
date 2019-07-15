@@ -7,5 +7,6 @@ console.log('Router Unprotected');
 
 router.post('/sign-up', Controller.auth.signUp);
 router.post('/sign-in', Controller.auth.signIn);
+router.post('/check', Controller.auth.checkEmail);
 
 export { router as auth };
